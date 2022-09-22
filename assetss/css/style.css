@@ -1,0 +1,355 @@
+    /* Reset CSS */
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box ;
+    }
+    html{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* 
+    1. Từ ngoài vào trong
+    2. Từ trên xuống dưới 
+    3. Tổng quan đến chi tiết 
+    */
+
+    /* 
+    1. Vị Trí
+    2.Kích Thước 
+    3.Màu Sắc
+    4.Kiệu dáng (kiểu chữ, hình trong , vuông, ... )
+    */
+
+
+
+    .clear{
+        clear: both;
+    }
+    .text-white{
+        color: white; !important
+    }
+
+    #main{
+
+    }
+
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 46px;
+        background-color: black;
+        z-index: 1;
+        
+
+        
+
+
+    }
+    #nav {
+        display: inline-block;
+
+    }
+    #nav, .subnav{
+        list-style-type: none;
+
+    }
+
+    #nav > li {
+        display:inline-block;
+    
+    }
+
+    #nav li {
+        position: relative;  /* Đây là thẻ tra của thẻ absolute */
+    
+
+    }
+
+    #nav > li > a {
+        color: #fff;
+        text-transform: uppercase;/* Đây là font chữ viết HOA*/ 
+
+    }
+
+    #nav li a {
+        text-decoration: none;
+        line-height: 46px;
+        padding: 0 24px;
+        display: inline-block;
+    }
+    #nav li:hover .subnav{
+        display: block;
+    }
+
+    #nav > li:hover > a,
+    #nav .subnav li:hover
+    {
+        color: #000;
+        background-color: #ccc;
+
+
+    }
+
+
+    #nav .subnav{
+        display: none;
+        min-width: 160px; /* Là chiều width của phần Subnav */
+        top: 100%;
+        left: 0;
+        position: absolute;/* đây là thẻ con của thẻ relative */
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);   /* Là để tạo viền mờ ở Subnav */
+    
+
+    }
+    #nav .subnav a{
+        color: #000;
+        padding: 0 12px;
+        line-height: 38px;/* sẽ ăn theo toàn bộ chiều cao của thẻ đó  */
+
+
+    }
+    #nav .nav-arrow-down{
+        font-size: 12px;
+    }
+
+    #header .search-btn {
+        float: right;/* sẽ đẩy Div sang bên phải  */
+        padding: 0 21px;
+        
+    }
+
+    #header .search-btn:hover{
+        background-color: #f44336 ;
+        cursor: pointer;  /* di vào sẽ thành bàn tay */
+            
+    }
+    #header .search-icon {
+    color: #fff;
+    font-size: 20px; 
+    line-height: 46px;
+    
+    }
+
+
+    #slider{
+        position: relative;
+        margin-top: 46px;
+        padding-top: 50% ;
+        background: url(/assetss/img/slider-1.jpg) top center / cover no-repeat;
+        
+
+    }
+    #slider .dext-contet{
+        position: absolute;
+        margin-bottom: 47px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        bottom: 0%;
+        
+    }
+    #slider .dex-heading{
+        font-weight: 500;
+        font-size: 24;
+        margin-bottom: 16px;
+
+    }
+    #slider .dext-description{
+        font-size: 15px;
+        margin: top 25px; 
+
+    }
+
+    #content{
+    
+
+    }
+    #content .content-section{
+        width: 800px;
+        padding: 64px 0;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    #content .section-heading{
+        font-size: 30px;
+        font-weight: 500;/* Lầm mỏng nét chữ  */
+        text-align: center;
+        letter-spacing: 4px; /* Làm dãn các chữ cái với nhau  */
+       
+    }
+
+
+   .content-section .section-sup-heading{
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 25px;
+    opacity: 0.6;/* Làm mờ chữ  (Từ 0 - 1) */
+   
+   
+        
+    }
+
+
+    #content .about-text{
+        margin-top: 25px;
+        text-align: justify;  /* Canh chữ đề 2 bên đầu dòng   */
+        line-height: 1.6;  /* Làm độ gãn các đòng với nhau ( Tiếng anh là 1.4; Tiếng việt là: 1.6 ) */
+
+        
+    }
+    #content .member-list{
+        /* display: flex; */
+        margin-top: 48px;
+        /* justify-content: space-between;         Là đẻ canh chỉnh vùng k sử dụng tất cả không gian có sẵn theo chục ngang */
+
+
+    }
+    #content .member-item{
+        /* display: inline-block;
+        width: 30%; */
+        float: left;
+        width: calc(100% / 3);
+        text-align: center;
+        
+
+        
+    }
+    #content .member-name{
+        font-size: 15px;
+        text-align: center;
+
+    }
+    #content .member-img{
+        margin-top: 15px;
+        width: 154px;
+        border-radius: 4px;
+    
+    
+    }
+    /* Tour-section */
+    #content .tour-section {
+        background-color: #000;
+    }
+    .tickets-lits {
+        background-color: #fff;
+        margin-top: 40px;
+        border-bottom: 1px ;
+      
+
+    }
+
+    .tickets-lits li {
+        color: #757575;
+        font-size: 15px;
+        padding: 11px 16px;
+        border-bottom: 1px solid #ddd;
+        list-style-type: none;
+
+    }
+
+    .tickets-lits .sold-out{
+        background: #f44336;
+        color: #fff;
+        margin-left: 16px;
+        padding: 0 8px;
+
+    }
+
+    .tickets-lits .quanlity{
+        float: right;
+        width: 20px;
+        background: #000;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        margin-top: -2px;
+
+    }
+    .place-list{
+
+        margin: 32px -8px 65px;
+    }
+
+
+    .place-item{
+        float: left;
+        width: 33.33333%;
+        padding: 0 8px;
+
+
+    }
+    
+    
+    .place-img{
+        width: 100%;
+        display: block;
+    }
+    .place-img:hover {
+        opacity: 0.6;
+    }
+
+
+    .place-body{
+        background-color: #fff;
+        padding: 16px 16px;
+        
+    }
+    
+
+    .place-heading{
+        font-size: 15px;
+        font-weight: 700;
+      
+      
+   
+    }
+
+
+    .place-time{
+        
+        font-size: 15px;
+        padding-top: 16px;
+        color: #757575;
+
+    }
+
+
+    .place-desc{
+        
+        font-size: 15px;
+        padding-top: 16px;
+
+    }
+
+
+    .place-buy-btn{
+        background-color: #000;
+        color: #fff;
+        padding: 11px 16px ;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 15px;
+
+    }
+
+    .place-buy-btn:hover {
+        background-color: #ccc;
+        color: #000;
+
+    }
+
+
+
+ 
+
+    
+
+    #footer{
+
+    }
+
